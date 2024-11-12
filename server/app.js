@@ -19,7 +19,7 @@ const dbURI = process.env.MONGODB_URI || require('../mongo-connection.js');
 
 mongoose.connect(dbURI).catch((err) => {
   if (err) {
-    console.log('Could not connect to database');
+    console.log('Could not connect to database'); 
     throw err;
   }
 });
