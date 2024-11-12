@@ -1,9 +1,10 @@
 const models = require('../models');
 
-const { Account } = models.Account;
+const { Account } = models;
 
 // render in all of our pages
 const loginPage = (req, res) => res.render('login');
+
 const signupPage = (req, res) => res.render('signup');
 
 const logout = (req, res) => res.redirect('/');
@@ -13,7 +14,7 @@ const login = (req, res) => {
   const pass = `${req.body.pass}`;
 
   if (!username || !pass) {
-    return res.status(400).json({ error: 'All fields are required' });
+    return res.status(400).json({ error: 'All fields are required!' });
   }
 
   return Account.authenticate(username, pass, (err, account) => {
@@ -22,7 +23,6 @@ const login = (req, res) => {
     }
 
     return res.json({ redirect: '/maker' });
-    
   });
 };
 

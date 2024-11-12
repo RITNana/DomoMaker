@@ -4,6 +4,7 @@
     "no-underscore-dangle": "off",
     "no-plusplus": "off",
     "import/extensions": "off",
-    "no-console": "off"
+    "no-console": "off",
+    "global-require": "off"
   }
 }
