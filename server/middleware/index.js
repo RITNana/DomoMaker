@@ -6,7 +6,7 @@
 // check if we attached an account to the session and redirection to home page
 const requiresLogin = (req, res, next) => {
   if (!req.session.account) {
-    return res.redirect('/');
+    return res.redirect('/'); 
   }
   return next();
 };
